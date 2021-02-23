@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Quiz ChordProgression.unity
     guid: fb68bf17567f7b849b3be938ac964cbb
+  - enabled: 1
+    path: Assets/Scenes/Training.unity
+    guid: 89cc5b8f07db4b749b53ff4c749a6a5e
+  - enabled: 1
+    path: Assets/Scenes/Training_singthechord.unity
+    guid: 7cbcd1a58ab106b44ada269bed5e9ec3
   m_configObjects: {}
