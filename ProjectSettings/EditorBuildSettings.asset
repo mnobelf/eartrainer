@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 58aff16efa09c0847a15ef3e1b73d123
+  - enabled: 1
+    path: Assets/Scenes/Training Menu.unity
+    guid: dc7330d39c1520e438663be15536c755
+  - enabled: 1
+    path: Assets/Quiz Menu.unity
+    guid: a949f6d6efbc8ba40ab762f536047902
+  - enabled: 1
+    path: Assets/Scenes/Quiz ChordProgression.unity
+    guid: fb68bf17567f7b849b3be938ac964cbb
   m_configObjects: {}
