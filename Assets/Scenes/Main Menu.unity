@@ -202,7 +202,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 200014762}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2165509746295010477, guid: be88cf91b2539ed408c56be1f5a3918e,
+          type: 3}
+        m_MethodName: LoadTrainingScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Free Play
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &200014762
 MonoBehaviour:
   m_ObjectHideFlags: 0

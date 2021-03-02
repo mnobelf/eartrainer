@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 1996909579}
   - component: {fileID: 1996909578}
   m_Layer: 5
-  m_Name: Image
+  m_Name: microphone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
