@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Training_singthechord.unity
     guid: 7cbcd1a58ab106b44ada269bed5e9ec3
+  - enabled: 1
+    path: Assets/Scenes/Free Play.unity
+    guid: b5c5fab917027094299afd07563551cd
   m_configObjects: {}
