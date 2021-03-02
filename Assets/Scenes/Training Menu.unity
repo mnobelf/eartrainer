@@ -618,7 +618,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 745234483}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 684349807301687178, guid: f3bcf6dd69dd84340aa92aaa25848b8c,
+          type: 3}
+        m_MethodName: LoadTrainingScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Training_fill_in_the_triads
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &745234483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1354,7 +1366,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1215300257}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 684349807301687178, guid: f3bcf6dd69dd84340aa92aaa25848b8c,
+          type: 3}
+        m_MethodName: LoadTrainingScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Training_above_and_below_the_notes
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1215300257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,7 +1497,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1302050294}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 684349807301687178, guid: f3bcf6dd69dd84340aa92aaa25848b8c,
+          type: 3}
+        m_MethodName: LoadTrainingScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Training_sing_the_notes
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1302050294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,7 +1915,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1970123242}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 684349807301687178, guid: f3bcf6dd69dd84340aa92aaa25848b8c,
+          type: 3}
+        m_MethodName: LoadTrainingScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Training_moving_triads
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1970123242
 MonoBehaviour:
   m_ObjectHideFlags: 0

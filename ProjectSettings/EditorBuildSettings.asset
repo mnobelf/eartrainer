@@ -21,9 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Training.unity
     guid: 89cc5b8f07db4b749b53ff4c749a6a5e
   - enabled: 1
-    path: Assets/Scenes/Training_singthechord.unity
+    path: Assets/Scenes/Training_sing_the_notes.unity
     guid: 7cbcd1a58ab106b44ada269bed5e9ec3
   - enabled: 1
     path: Assets/Scenes/Free Play.unity
     guid: b5c5fab917027094299afd07563551cd
+  - enabled: 1
+    path: Assets/Scenes/Training_above_and_below_the_notes.unity
+    guid: f514be120b07093448e82f6f48225373
+  - enabled: 1
+    path: Assets/Scenes/Training_fill_in_the_triads.unity
+    guid: 42cfb7ca24171524abf5e2ab3e249064
+  - enabled: 1
+    path: Assets/Scenes/Training_moving_triads.unity
+    guid: dd11ee1958bf4d14eb572b1ef77c31bd
   m_configObjects: {}
