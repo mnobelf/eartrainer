@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Quiz Interval.unity
+- path: Assets/Scenes/Training Menu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
