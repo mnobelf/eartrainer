@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Quiz ChordProgression.unity
+=======
+- path: Assets/Scenes/Quiz ChordIdentification.unity
+>>>>>>> bea40de0eeaf85914084aaa54d87939720d0b297
   isLoaded: 1
   isActive: 1
   isSubScene: 0
