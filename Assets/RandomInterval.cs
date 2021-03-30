@@ -9,12 +9,14 @@ public class RandomInterval : MonoBehaviour
     AudioSource[] audioSources;
     int root;
     int interval;
+    public QuizManager QuizManager;
 
-    void Start()
+    public void PlaySound()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
         root = Random.Range(0,24);
-        interval = Random.Range(-12, 13);
+        interval = Random.Range(-5, 6);
+        QuizManager.SetKeyAnswer(interval);
 
         Invoke("PlaySound1", 1f);
     }
