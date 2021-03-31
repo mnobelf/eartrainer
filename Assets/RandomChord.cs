@@ -9,8 +9,9 @@ public class RandomChord : MonoBehaviour
     AudioSource[] audioSources;
     int root;
     int chord;
+    public QuizManager QuizManager;
 
-    void Start()
+    public void PlaySound()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
         root = Random.Range(0,18);
@@ -19,18 +20,22 @@ public class RandomChord : MonoBehaviour
         if (chord == 1)
         {
             Invoke("PlayMajor", 1f);
+            QuizManager.SetKeyAnswer(1);
         }
         else if (chord == 2)
         {
             Invoke("PlayMinor", 1f);
+            QuizManager.SetKeyAnswer(2);
         }
         else if (chord == 3)
         {
             Invoke("PlayDiminished", 1f);
+            QuizManager.SetKeyAnswer(3);
         }
         else
         {
             Invoke("PlayAugmented", 1f);
+            QuizManager.SetKeyAnswer(4);
         }
         
     }
@@ -51,6 +56,13 @@ public class RandomChord : MonoBehaviour
     }
 
     void PlayAugmented()
+    {
+        audioSources[root].Play();
+        audioSources[root+4].Play();
+        audioSources[root+7].Play();
+    }
+
+    void PlayDiminished()
     {
         audioSources[root].Play();
         audioSources[root+3].Play();

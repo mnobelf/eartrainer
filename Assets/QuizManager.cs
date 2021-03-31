@@ -9,13 +9,17 @@ public class QuizManager : MonoBehaviour
     public int answer;
     public RandomInterval generator;
     public RandomScale generator2;
+    public RandomChord generator3;
 
     void AskGenerator()
     {
         if (gameObject.tag == "Scale")
         {
             generator2.PlaySound();
-        } else 
+        } else if (gameObject.tag == "Chord")
+        {
+            generator3.PlaySound();
+        } else
         {
             generator.PlaySound();
         }
