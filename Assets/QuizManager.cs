@@ -8,10 +8,17 @@ public class QuizManager : MonoBehaviour
 
     public int answer;
     public RandomInterval generator;
+    public RandomScale generator2;
 
     void AskGenerator()
     {
-        generator.PlaySound();
+        if (gameObject.tag == "Scale")
+        {
+            generator2.PlaySound();
+        } else 
+        {
+            generator.PlaySound();
+        }
     }
 
     public void SetKeyAnswer(int input)

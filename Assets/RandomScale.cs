@@ -10,8 +10,19 @@ public class RandomScale : MonoBehaviour
     int root;
     int scale;
     int index;
+    public QuizManager QuizManager;
 
     void Start()
+    {
+        
+    }
+
+    IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(1);
+    }
+
+    public void PlaySound()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
         root = Random.Range(0,12);
@@ -19,88 +30,113 @@ public class RandomScale : MonoBehaviour
 
         if (scale == 1)
         {
-            Invoke("PlayMajor", 1f);
+            StartCoroutine(PlayMajor());
+            QuizManager.SetKeyAnswer(1);
         }
         else if (scale == 2)
         {
-            Invoke("PlayMinor", 1f);
+            StartCoroutine(PlayMinor());
+            QuizManager.SetKeyAnswer(2);
         }
         else if (scale == 3)
         {
-            Invoke("PlayDiminished", 1f);
+            StartCoroutine(PlayPentatonicMajor());
+            QuizManager.SetKeyAnswer(3);
         }
         else
         {
-            Invoke("PlayAugmented", 1f);
+            StartCoroutine(PlayBlues());
+            QuizManager.SetKeyAnswer(4);
         }
         
     }
 
     // Update is called once per frame
-    void PlayMajor()
+    IEnumerator PlayMajor()
     {
         index = root;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 2;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 4;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 5;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 7;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 9;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 11;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
     }
 
-    void PlayMinor()
+    IEnumerator PlayMinor()
     {
         index = root;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 2;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 3;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 5;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 7;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 8;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 10;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
     }
 
-    void PlayPentatonicMajor()
+    IEnumerator PlayPentatonicMajor()
     {
         index = root;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 2;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 4;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 7;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 9;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
     }
 
-    void PlayBlues()
+    IEnumerator PlayBlues()
     {
         index = root;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 2;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 3;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 4;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 7;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
         index = root + 9;
-        Invoke("PlayANote", 1f);
+        Invoke("PlayANote",0);
     }
 
     void PlayANote()
