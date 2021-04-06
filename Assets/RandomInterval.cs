@@ -21,6 +21,12 @@ public class RandomInterval : MonoBehaviour
         Invoke("PlaySound1", 1f);
     }
 
+    public void Repeat()
+    {
+        audioSources = gameObject.GetComponents<AudioSource>();
+        Invoke("PlaySound1", 1f);
+    }
+
     // Update is called once per frame
     void PlaySound1()
     {

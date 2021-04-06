@@ -257,7 +257,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: 4
+  i: 0
+  ans: 000000000000000000000000
   QuizManager: {fileID: 1439875770}
+  b1: {fileID: 0}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
 --- !u!114 &420234674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3367,7 +3372,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: 1
+  i: 0
+  ans: 000000000000000000000000
   QuizManager: {fileID: 1439875770}
+  b1: {fileID: 0}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
 --- !u!114 &1088334490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3594,7 +3604,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: 2
+  i: 0
+  ans: 000000000000000000000000
   QuizManager: {fileID: 1439875770}
+  b1: {fileID: 0}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
 --- !u!114 &1266399464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3739,7 +3754,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Answer: 3
+  i: 0
+  ans: 000000000000000000000000
   QuizManager: {fileID: 1439875770}
+  b1: {fileID: 0}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
 --- !u!114 &1387619862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3861,9 +3881,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   answer: 0
+  ans: 000000000000000000000000
   generator: {fileID: 0}
   generator2: {fileID: 0}
   generator3: {fileID: 616285151}
+  generator4: {fileID: 0}
+  correctness: {fileID: 0}
 --- !u!4 &1439875771
 Transform:
   m_ObjectHideFlags: 0
@@ -4181,7 +4204,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1963700258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 616285151}
+        m_MethodName: Repeat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1963700258
 MonoBehaviour:
   m_ObjectHideFlags: 0

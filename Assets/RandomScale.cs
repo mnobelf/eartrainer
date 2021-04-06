@@ -51,6 +51,30 @@ public class RandomScale : MonoBehaviour
         
     }
 
+    public void Repeat()
+    {
+        if (scale == 1)
+        {
+            StartCoroutine(PlayMajor());
+            QuizManager.SetKeyAnswer(1);
+        }
+        else if (scale == 2)
+        {
+            StartCoroutine(PlayMinor());
+            QuizManager.SetKeyAnswer(2);
+        }
+        else if (scale == 3)
+        {
+            StartCoroutine(PlayPentatonicMajor());
+            QuizManager.SetKeyAnswer(3);
+        }
+        else
+        {
+            StartCoroutine(PlayBlues());
+            QuizManager.SetKeyAnswer(4);
+        }
+        
+    }
     // Update is called once per frame
     IEnumerator PlayMajor()
     {

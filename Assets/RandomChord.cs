@@ -40,6 +40,33 @@ public class RandomChord : MonoBehaviour
         
     }
 
+    public void Repeat()
+    {
+        audioSources = gameObject.GetComponents<AudioSource>();
+        
+        if (chord == 1)
+        {
+            Invoke("PlayMajor", 1f);
+            QuizManager.SetKeyAnswer(1);
+        }
+        else if (chord == 2)
+        {
+            Invoke("PlayMinor", 1f);
+            QuizManager.SetKeyAnswer(2);
+        }
+        else if (chord == 3)
+        {
+            Invoke("PlayDiminished", 1f);
+            QuizManager.SetKeyAnswer(3);
+        }
+        else
+        {
+            Invoke("PlayAugmented", 1f);
+            QuizManager.SetKeyAnswer(4);
+        }
+        
+    }
+
     // Update is called once per frame
     void PlayMajor()
     {
