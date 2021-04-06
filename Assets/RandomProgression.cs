@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RandomProgression : MonoBehaviour
 {
     // Start is called before the first frame update
 
     AudioSource[] audioSources;
-    int root;
-    int chord;
-    float interval = 1.0f;
+    public int root;
+    public int chord;
+    public QuizManager QuizManager;
+    int[] answer = new int[3];
+    public string[] rep = new string[3];
+    public Button b;
 
-    void Start()
+    public void PlaySound()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
-        chord = Random.Range(1,2);
-        chord = 2;
+        chord = Random.Range(1,3);
+        chord = 1;
 
         if (chord == 1)
         {
@@ -24,6 +28,7 @@ public class RandomProgression : MonoBehaviour
         else if (chord == 2)
         {
             StartCoroutine(PlayMinor());
+            // QuizManager.SetKeyAnswer(2);
         }
         // else 
         // {
@@ -35,25 +40,27 @@ public class RandomProgression : MonoBehaviour
     // Update is called once per frame
     IEnumerator PlayMajor()
     {
-        int rand = Random.Range(1,3);
-
         int[] AllowedValues = new int[] {0, 2, 4, 5, 7, 9, 11};
-        int root = AllowedValues[Random.Range(0,6)];
-
-        // // Invoke("C", 0.5f);
+        int root = AllowedValues[Random.Range(0,7)];
 
         audioSources[root].Play();
         yield return new WaitForSeconds(1.0f);
 
+        int rand = Random.Range(1,4);
+
         if (rand == 1) { 
+            answer[0] = 1;
 
             Invoke("ProgI", 0.5f);
 
             yield return new WaitForSeconds(1.0f);
 
-            rand = Random.Range(1,2);
+            rand = Random.Range(1,3);
 
             if (rand == 1) {
+                answer[1] = 2;
+                answer[2] = 3;
+    
                 Invoke("ProgIV", 0.5f);
                 
                 yield return new WaitForSeconds(1.0f);
@@ -61,21 +68,29 @@ public class RandomProgression : MonoBehaviour
                 Invoke("ProgV", 0.5f);
             }
             else {
-                Invoke("ProgIV", 0.5f);
+                answer[1] = 3;
+                answer[2] = 2;
+                
+                Invoke("ProgV", 0.5f);
 
                 yield return new WaitForSeconds(1.0f);
 
-                Invoke("ProgV", 0.5f);
+                Invoke("ProgIV", 0.5f);
             }
         }
         else if (rand == 2) {
-           Invoke("ProgIV", 0.5f);
+            answer[0] = 2;
+
+            Invoke("ProgIV", 0.5f);
 
             yield return new WaitForSeconds(1.0f);
 
-            rand = Random.Range(1,2);
+            rand = Random.Range(1,3);
 
             if (rand == 1) {
+                answer[1] = 1;
+                answer[2] = 3;
+                
                 Invoke("ProgI", 0.5f);
                 
                 yield return new WaitForSeconds(1.0f);
@@ -83,6 +98,9 @@ public class RandomProgression : MonoBehaviour
                 Invoke("ProgV", 0.5f);
             }
             else {
+                answer[1] = 3;
+                answer[2] = 1;
+
                 Invoke("ProgV", 0.5f);
 
                 yield return new WaitForSeconds(1.0f);
@@ -90,14 +108,19 @@ public class RandomProgression : MonoBehaviour
                 Invoke("ProgI", 0.5f);
             }
         }
-        else {
+        else if (rand == 3) {
+            answer[0] = 3;
+
             Invoke("ProgV", 0.5f);
 
             yield return new WaitForSeconds(1.0f);
 
-            rand = Random.Range(1,2);
+            rand = Random.Range(1,3);
 
             if (rand == 1) {
+                answer[1] = 1;
+                answer[2] = 2;
+
                 Invoke("ProgI", 0.5f);
                 
                 yield return new WaitForSeconds(1.0f);
@@ -105,6 +128,9 @@ public class RandomProgression : MonoBehaviour
                 Invoke("ProgIV", 0.5f);
             }
             else {
+                answer[1] = 2;
+                answer[2] = 1;
+
                 Invoke("ProgIV", 0.5f);
 
                 yield return new WaitForSeconds(1.0f);
@@ -112,6 +138,18 @@ public class RandomProgression : MonoBehaviour
                 Invoke("ProgI", 0.5f);
             }
         }
+
+        for (int c = 0; c < 3; c++)
+        {
+            if (answer[c] == 1)
+                rep[c] = "ProgI";
+            else if (answer [c] == 2)
+                rep[c] = "ProgIV";
+            else
+                rep[c] = "ProgV";
+        }
+
+        QuizManager.SetKeyAnswerProg(answer);
     }
 
     IEnumerator PlayMinor()
@@ -146,6 +184,24 @@ public class RandomProgression : MonoBehaviour
         audioSources[0].Play();
         audioSources[3].Play();
         audioSources[7].Play();
+    }
+
+    void Start()
+    {
+        Button button = b.GetComponent<Button>();
+        button.onClick.AddListener(delegate {StartCoroutine(Replay());});
+    }
+
+    IEnumerator Replay()
+    {
+        Invoke(rep[0], 0.5f);
+        yield return new WaitForSeconds(1.0f);
+
+        Invoke(rep[1], 0.5f);
+        yield return new WaitForSeconds(1.0f);
+
+        Invoke(rep[2], 0.5f);
+        yield return new WaitForSeconds(1.0f);
     }
 
 

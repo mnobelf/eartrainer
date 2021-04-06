@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\AudioManager.cs" />
      <Compile Include="Assets\ButtonCPScript.cs" />
+     <Compile Include="Assets\CheckCorrectness.cs" />
      <Compile Include="Assets\LoadScene.cs" />
      <Compile Include="Assets\QuizManager.cs" />
      <Compile Include="Assets\RandomChord.cs" />
@@ -65,6 +66,7 @@
      <Compile Include="Assets\RandomScale.cs" />
      <Compile Include="Assets\SetAnswer.cs" />
      <Compile Include="Assets\Sound.cs" />
+     <Compile Include="Assets\contohhh.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

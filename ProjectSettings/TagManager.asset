@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Scale
   - Chord
+  - Progression
   layers:
   - Default
   - TransparentFX
