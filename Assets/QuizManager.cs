@@ -50,9 +50,11 @@ public class QuizManager : MonoBehaviour
     {
         if (input == answer) {
             Debug.Log("Correct");
+            correctness.correct();
             Invoke("AskGenerator",1f);
         } else {
             Debug.Log("Incorrect");
+            correctness.incorrect();
         }
     }
 
