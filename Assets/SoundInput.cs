@@ -40,7 +40,7 @@ public class SoundInput : MonoBehaviour
             while (!(Microphone.GetPosition(microphone) > 0))
             {
             } 
-
+            audioSource.Play();
             Debug.Log("recording started with " + microphone);
 
         }
