@@ -48,7 +48,7 @@ public class QuizManager : MonoBehaviour
 
     public void CheckAnswer(int input)
     {
-        if (input == answer) {
+        if (input == Mathf.Abs(answer)) {
             Debug.Log("Correct");
             correctness.correct();
             Invoke("AskGenerator",1f);

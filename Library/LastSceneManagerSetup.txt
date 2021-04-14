@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Training_sing_the_notes.unity
+- path: Assets/Scenes/Quiz Interval.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -15,7 +15,7 @@ public class SetAnswer : MonoBehaviour
 
     public void SendAnswer()
     {
-        QuizManager.CheckAnswer(2);
+        QuizManager.CheckAnswer(Answer);
     }
 
     public void SendAnswerProg(int a)
