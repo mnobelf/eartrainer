@@ -108,7 +108,7 @@ public class GenerateInterval : MonoBehaviour
     void Update()
     {
         pi_mic = AnalyzeSound(aus[25]);
-        if (pi_mic==pitchAnswer)
+        if ((pi_mic>=(pitchAnswer-1)) && ((pi_mic <= (pitchAnswer + 1))))
         {
             txt.text = "Answer Correct";
         }
