@@ -62,6 +62,7 @@
      <Compile Include="Assets\GenerateInterval.cs" />
      <Compile Include="Assets\GeneratePitch.cs" />
      <Compile Include="Assets\LoadScene.cs" />
+     <Compile Include="Assets\PitchAnalyzer.cs" />
      <Compile Include="Assets\PitchDetector.cs" />
      <Compile Include="Assets\QuizManager.cs" />
      <Compile Include="Assets\RandomChord.cs" />
