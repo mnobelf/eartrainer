@@ -14,7 +14,11 @@ public class RandomInterval : MonoBehaviour
     public void PlaySound()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
-        root = Random.Range(0,24);
+        foreach (AudioSource item in audioSources)
+        {
+            item.Stop();
+        }
+        root = Random.Range(5,18);
         interval = Random.Range(0, 2);
         if (interval == 1) 
         {
@@ -43,13 +47,6 @@ public class RandomInterval : MonoBehaviour
 
     void PlaySound2()
     {
-        if (root + interval < 23 && root + interval > -1) 
-        {
-            audioSources[root+interval].Play();
-        }
-        else 
-        {
-            audioSources[root+3].Play();
-        }
+        audioSources[root+interval].Play();
     }
 }

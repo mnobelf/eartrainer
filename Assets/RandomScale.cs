@@ -25,6 +25,10 @@ public class RandomScale : MonoBehaviour
     public void PlaySound()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
+        foreach (AudioSource item in audioSources)
+        {
+            item.Stop();
+        }
         root = Random.Range(0,12);
         scale = Random.Range(1, 5);
 

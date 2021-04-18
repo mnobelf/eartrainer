@@ -14,7 +14,11 @@ public class RandomChord : MonoBehaviour
     public void PlaySound()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
-        root = Random.Range(0,18);
+        foreach (AudioSource item in audioSources)
+        {
+            item.Stop();
+        }
+        root = Random.Range(0,16);
         chord = Random.Range(1, 5);
 
         if (chord == 1)
