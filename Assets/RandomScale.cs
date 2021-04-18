@@ -81,22 +81,32 @@ public class RandomScale : MonoBehaviour
         index = root;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 2;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 4;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 5;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 7;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 9;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 11;
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
+        index = root + 12;
         Invoke("PlayANote",0);
     }
 
@@ -105,22 +115,32 @@ public class RandomScale : MonoBehaviour
         index = root;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 2;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 3;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 5;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 7;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 8;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 10;
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
+        index = root + 12;
         Invoke("PlayANote",0);
     }
 
@@ -129,16 +149,24 @@ public class RandomScale : MonoBehaviour
         index = root;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 2;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 4;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 7;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 9;
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
+        index = root + 12;
         Invoke("PlayANote",0);
     }
 
@@ -147,25 +175,39 @@ public class RandomScale : MonoBehaviour
         index = root;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 2;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 3;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 4;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 7;
         Invoke("PlayANote",0);
         yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
         index = root + 9;
+        Invoke("PlayANote",0);
+        yield return new WaitForSeconds(1);
+        Invoke("StopANote",0);
+        index = root + 12;
         Invoke("PlayANote",0);
     }
 
     void PlayANote()
     {
         audioSources[index].Play();
+    }
+
+    void StopANote()
+    {
+        audioSources[index].Stop();
     }
 }
 
