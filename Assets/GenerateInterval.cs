@@ -24,6 +24,11 @@ public class GenerateInterval : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Play();
+    }
+
+    void Play()
+    {
 
         index_interval = Random.Range(0, 12);
         interval_name = new string[12];
@@ -96,6 +101,8 @@ public class GenerateInterval : MonoBehaviour
         if ((pi_mic>=(pitchAnswer-1)) && ((pi_mic <= (pitchAnswer + 1))))
         {
             txt.text = "Answer Correct";
+            pitchAnswer = 88;
+            Invoke("Play", 1f);
         }
     }
 
