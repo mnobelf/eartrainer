@@ -51,7 +51,7 @@ public class GenerateInterval : MonoBehaviour
             txt.text = interval_name[index_interval] + " Down";
         }
 
-        index_not = Random.Range(0, 25);
+        index_not = Random.Range(0, 11);
         aus[index_not].Play();
         Debug.Log(index_interval.ToString());
         Debug.Log(aus[index_not].name);
@@ -84,10 +84,15 @@ public class GenerateInterval : MonoBehaviour
 
     }
 
+    public void HearAgain()
+    {
+        aus[index_not].Play();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        pi_mic = analyzer.AnalyzeSound(aus[25]);
+        pi_mic = analyzer.AnalyzeSound(aus[11]);
         if ((pi_mic>=(pitchAnswer-1)) && ((pi_mic <= (pitchAnswer + 1))))
         {
             txt.text = "Answer Correct";
