@@ -9,6 +9,7 @@ public class GenerateInterval : MonoBehaviour
     public float pi_mic;
 
     int index_interval;
+    int index_up_down;
     int index_not;
     int index_not_answer;
     int chord;
@@ -39,8 +40,16 @@ public class GenerateInterval : MonoBehaviour
         interval_name[10] = "Major 7th";
         interval_name[11] = "Octave";
 
-        txt.text = interval_name[index_interval]+" Up";
-
+        index_up_down = Random.Range(0, 2);
+        //index_up_down = 1;
+        if (index_up_down == 0)
+        {
+            txt.text = interval_name[index_interval] + " Up";
+        }
+        else
+        {
+            txt.text = interval_name[index_interval] + " Down";
+        }
 
         index_not = Random.Range(0, 25);
         aus[index_not].Play();
@@ -63,7 +72,9 @@ public class GenerateInterval : MonoBehaviour
         pitchNot.Add("c6", 64);
         pitchNot.Add("c7", 76);
         pitchNot.Add("d5#", 54);
+        pitchNot.Add("d5", 54);
         pitchNot.Add("d6#", 66);
+        pitchNot.Add("d6", 66);
         pitchNot.Add("e5", 56);
         pitchNot.Add("e6", 68);
         pitchNot.Add("f5#", 57);
@@ -75,8 +86,14 @@ public class GenerateInterval : MonoBehaviour
         pitchNot.Add("g6#", 71);
         pitchNot.Add("g6", 71);
 
-
-        pitchAnswer = pitchNot[aus[index_not].name] + (index_interval + 1);
+        if (index_up_down == 0)
+        {
+            pitchAnswer = pitchNot[aus[index_not].name] + (index_interval + 1);
+        }
+        else
+        {
+            pitchAnswer = pitchNot[aus[index_not].name] - (index_interval + 1);
+        }
         Debug.Log(pitchAnswer.ToString());
 
     }
