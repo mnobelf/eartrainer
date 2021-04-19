@@ -16,7 +16,6 @@ public class GenerateInterval : MonoBehaviour
     int pitchAnswer;
     string[] interval_name;
     string[] not_name;
-    public QuizManager QuizManager;
     public Text txt;
     public AudioSource[] aus;
     public PitchAnalyzer analyzer;
@@ -102,7 +101,7 @@ public class GenerateInterval : MonoBehaviour
         {
             txt.text = "Answer Correct";
             pitchAnswer = 88;
-            Invoke("Play", 1f);
+            Invoke("Play", 2f);
         }
     }
 

@@ -60,6 +60,7 @@
      <Compile Include="Assets\ButtonCPScript.cs" />
      <Compile Include="Assets\CheckCorrectness.cs" />
      <Compile Include="Assets\GenerateInterval.cs" />
+     <Compile Include="Assets\GenerateP5.cs" />
      <Compile Include="Assets\GeneratePitch.cs" />
      <Compile Include="Assets\LoadScene.cs" />
      <Compile Include="Assets\PitchAnalyzer.cs" />
