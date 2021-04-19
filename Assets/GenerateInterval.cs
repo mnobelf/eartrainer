@@ -98,7 +98,7 @@ public class GenerateInterval : MonoBehaviour
     void Update()
     {
         pi_mic = analyzer.AnalyzeSound(aus[11]);
-        if ((pi_mic>=(pitchAnswer-1)) && ((pi_mic <= (pitchAnswer + 1))))
+        if ((pi_mic>=(pitchAnswer-0.3)) && ((pi_mic <= (pitchAnswer + 0.3))))
         {
             txt.text = "Answer Correct";
             pitchAnswer = 88;
