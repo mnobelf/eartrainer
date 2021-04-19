@@ -60,31 +60,17 @@ public class GenerateInterval : MonoBehaviour
         //Debug.Log(index_not_answer.ToString());
 
         Dictionary<string, int> pitchNot = new Dictionary<string, int>();
-        pitchNot.Add("a5#", 61);
-        pitchNot.Add("a5", 61);
-        pitchNot.Add("a6#", 73);
-        pitchNot.Add("a6", 73);
-        pitchNot.Add("b5", 63);
-        pitchNot.Add("b6", 75);
-        pitchNot.Add("c5#", 52);
-        pitchNot.Add("c5", 52);
-        pitchNot.Add("c6#", 64);
-        pitchNot.Add("c6", 64);
-        pitchNot.Add("c7", 76);
-        pitchNot.Add("d5#", 54);
-        pitchNot.Add("d5", 54);
-        pitchNot.Add("d6#", 66);
-        pitchNot.Add("d6", 66);
-        pitchNot.Add("e5", 56);
-        pitchNot.Add("e6", 68);
-        pitchNot.Add("f5#", 57);
-        pitchNot.Add("f5", 57);
-        pitchNot.Add("f6#", 69);
-        pitchNot.Add("f6", 69);
-        pitchNot.Add("g5#", 59);
-        pitchNot.Add("g5", 59);
-        pitchNot.Add("g6#", 71);
-        pitchNot.Add("g6", 71);
+        pitchNot.Add("F#3", 34);
+        pitchNot.Add("G3", 35);
+        pitchNot.Add("G#3", 36);
+        pitchNot.Add("A3", 37);
+        pitchNot.Add("A#3", 38);
+        pitchNot.Add("B3", 39);
+        pitchNot.Add("C4", 40);
+        pitchNot.Add("C#4", 41);
+        pitchNot.Add("D4", 42);
+        pitchNot.Add("D#4", 43);
+        pitchNot.Add("E4", 44);
 
         if (index_up_down == 0)
         {
