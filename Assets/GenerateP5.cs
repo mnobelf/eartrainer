@@ -12,7 +12,7 @@ public class GenerateP5 : MonoBehaviour
     int index_not;
     int pitchAnswer;
     public Text txt;
-    public AudioSource[] aus;
+    public AudioSource[] audioSources;
     public PitchAnalyzer analyzer;
     
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class GenerateP5 : MonoBehaviour
 
     void Play()
     {
-
+        audioSources = gameObject.GetComponents<AudioSource>();
         chord = Random.Range(0, 1);
 
         //index_up_down = 1;
@@ -36,31 +36,18 @@ public class GenerateP5 : MonoBehaviour
             txt.text = "Minor";
         }
 
-        index_not = Random.Range(0, 4);
-        aus[index_not].Play();
-        aus[index_not+7].Play();
+        index_not = Random.Range(3, 15);
+        audioSources[index_not].Play();
+        audioSources[index_not+7].Play();
         //Debug.Log(index_not_answer.ToString());
-
-        Dictionary<string, int> pitchNot = new Dictionary<string, int>();
-        pitchNot.Add("F#3", 34);
-        pitchNot.Add("G3", 35);
-        pitchNot.Add("G#3", 36);
-        pitchNot.Add("A3", 37);
-        pitchNot.Add("A#3", 38);
-        pitchNot.Add("B3", 39);
-        pitchNot.Add("C4", 40);
-        pitchNot.Add("C#4", 41);
-        pitchNot.Add("D4", 42);
-        pitchNot.Add("D#4", 43);
-        pitchNot.Add("E4", 44);
 
         if (chord == 0)
         {
-            pitchAnswer = pitchNot[aus[index_not].name] + 4;
+            pitchAnswer = index_not + 28 + 4;
         }
         else
         {
-            pitchAnswer = pitchNot[aus[index_not].name] - 3;
+            pitchAnswer = index_not + 28 + 3;
         }
         Debug.Log(pitchAnswer.ToString());
 
@@ -68,14 +55,14 @@ public class GenerateP5 : MonoBehaviour
 
     public void HearAgain()
     {
-        aus[index_not].Play();
-        aus[index_not+7].Play();
+        audioSources[index_not].Play();
+        audioSources[index_not+7].Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        pi_mic = analyzer.AnalyzeSound(aus[11]);
+        pi_mic = analyzer.AnalyzeSound(audioSources[25]);
         if ((pi_mic>=(pitchAnswer-0.3)) && ((pi_mic <= (pitchAnswer + 0.3))))
         {
             txt.text = "Answer Correct";
