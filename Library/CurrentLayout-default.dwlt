@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 70
+  controlID: 17
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 71
+  controlID: 105
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 72
+  controlID: 106
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 289
     height: 380
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -265,8 +265,8 @@ MonoBehaviour:
     y: 0
     width: 400
     height: 675
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -395,21 +395,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d4d8ffff48d9ffff58d9ffff68d9ffff72d9ffff7cd9ffff8cd9ffff9cd9ffffacd9ffffbcd9ffffccd9ffffe2d9fffff2d9ffff1edaffffbedaffff62dbffff86dcffff94dcffff10deffff22deffff2cdeffff3cdeffff4cdeffff5cdeffff72deffffd0e6ffffe0e6ffffeae6fffffae6ffff0ae7ffff1ae7ffff2ae7ffff3ae7ffff50e7ffff5ae7ffffcae8ffffe0e8ffffdae9ffff92eaffff02ebffff40ebffff84ebffff96ebffff56ecffff6aecffff80ecffff94ecffffaaecffffc2ecffff2eeeffff92f0ffffa4f0ffff02f1ffff14f1ffff1ef1ffff32f1ffff3cf1ffff46f1ffff58f1ffff62f1ffff74f1ffff7ef1ffff88f1ffff9af1ffffdef1fffff0f1fffffaf1ffffeaf2ffffa6480000f8480000404b0000224e000014530000485500005a550000dc560000945a00001262000028620000826200008c690000de690000346c0000426e0000b47000005a7800008a780000
+      m_ExpandedIDs: 54f7ffff163a0000563a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: BG Training
-        m_OriginalName: BG Training
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -6464
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -455,9 +455,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 363.02426, y: 754.6925, z: -121.375}
+    m_Target: {x: 387.63495, y: 639.4952, z: -219.75}
     speed: 2
-    m_Value: {x: 363.02426, y: 754.6925, z: -121.375}
+    m_Value: {x: 387.63495, y: 639.4952, z: -219.75}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -507,9 +507,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 678.38745
+    m_Target: 368.23602
     speed: 2
-    m_Value: 649.1746
+    m_Value: 368.23602
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -573,11 +573,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sound Library
+    - Assets/Images/Background
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sound Library
+  - Assets/Images/Background
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\PAULUS\OneDrive - Institut Teknologi Bandung\Tugas\IF
     4 Com\eartrainer
@@ -585,9 +585,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90390000
-    m_LastClickedID: 14736
-    m_ExpandedIDs: 0000000082390000
+    m_SelectedIDs: ec3a0000
+    m_LastClickedID: 15084
+    m_ExpandedIDs: 00000000d23a0000d63a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -615,7 +615,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000082390000
+    m_ExpandedIDs: 00000000d23a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -734,4 +734,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 213
