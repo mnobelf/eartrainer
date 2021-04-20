@@ -13,6 +13,7 @@ public class GenerateP5 : MonoBehaviour
     int pitchAnswer;
     public Text txt;
     public AudioSource[] audioSources;
+    public AudioSource mic;
     public PitchAnalyzer analyzer;
     
     // Start is called before the first frame update
@@ -62,7 +63,7 @@ public class GenerateP5 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pi_mic = analyzer.AnalyzeSound(audioSources[25]);
+        pi_mic = analyzer.AnalyzeSound(mic);
         if ((pi_mic>=(pitchAnswer-0.3)) && ((pi_mic <= (pitchAnswer + 0.3))))
         {
             txt.text = "Answer Correct";
