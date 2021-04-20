@@ -251,9 +251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025dfe0b1ee30cd4fb034cbaa789b878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Answer: 0
+  Answer: 1
   i: 0
-  ans: 000000000000000000000000
   QuizManager: {fileID: 785326652}
   b1: {fileID: 177604613}
   b2: {fileID: 517141816}
@@ -667,9 +666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025dfe0b1ee30cd4fb034cbaa789b878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Answer: 0
+  Answer: 2
   i: 0
-  ans: 000000000000000000000000
   QuizManager: {fileID: 785326652}
   b1: {fileID: 177604613}
   b2: {fileID: 517141816}
@@ -902,6 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2548ad09b17d98f458ebf25f904f6929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSources: []
   root: 0
   chord: 0
   QuizManager: {fileID: 785326652}
@@ -1016,7 +1015,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 53f202ece267a994ab8beb4517ebb0c4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dd15bc21979bea3439350a601d000305, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1112,7 +1111,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cbc7c362d17eb844e8c194e0c5e1cfea, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6c3ae3d237456e64e842aa57e63afc27, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1208,7 +1207,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 470bc3509eeb3e14d8fc5656ff7b54ce, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 12a106193812b4145ba42cfb63c7ce67, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1304,7 +1303,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7384dc141354eef4c88668652d8ff7b2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ee2b729767671c944b46836a4edd1000, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1400,7 +1399,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c437184a5d3435742abd758ab4b33ebf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 604448004a0e3be4899e145ba026551e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1496,7 +1495,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: afe427154f0dbc54993e1a64e6f55d31, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1a48d803d7b0b334ebc45ee3c49cab48, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1592,7 +1591,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 63ec9c45ce809f34089aea98ec0767cc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f141cc16e84724f46aba20245fb177d6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1688,7 +1687,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ca951346bebecfd4d9d85e35b1fca073, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0b257b8bb1238244ea3d0f1506e5f84b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1784,7 +1783,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cb3dd3bf83160aa458bb56c6f00ad1a8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: af049890e00287b44a1aeec8bd628770, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1880,7 +1879,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c00a60549bd8c9d4aa6b71b07218dde9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0e976be5e6ef0af429a6c1172e81e146, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1976,7 +1975,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bef67d56fb56c1c41b410f31609f5ead, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0bf4ee823632a3b48b7d71ea242214d8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3238,7 +3237,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a42d8fb1b46ccd34dadbc25272a3440d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6556c5ddcda98684da8b4aa650b25f6f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3485,7 +3484,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   answer: 0
+  keyans: 000000000000000000000000
   ans: 000000000000000000000000
+  i: 0
   generator: {fileID: 0}
   generator2: {fileID: 0}
   generator3: {fileID: 0}
@@ -3820,7 +3821,6 @@ GameObject:
   - component: {fileID: 1474370067}
   - component: {fileID: 1474370066}
   - component: {fileID: 1474370065}
-  - component: {fileID: 1474370068}
   m_Layer: 5
   m_Name: replay-button
   m_TagString: Untagged
@@ -3890,7 +3890,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474370066}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 581215549}
+        m_MethodName: HearAgain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1474370066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3928,26 +3939,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474370063}
   m_CullTransparentMesh: 0
---- !u!114 &1474370068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1474370063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2548ad09b17d98f458ebf25f904f6929, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  root: 0
-  chord: 0
-  QuizManager: {fileID: 0}
-  rep:
-  - 
-  - 
-  - 
-  b: {fileID: 1474370065}
 --- !u!1 &1530669836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4000,9 +3991,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025dfe0b1ee30cd4fb034cbaa789b878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Answer: 0
+  Answer: 3
   i: 0
-  ans: 000000000000000000000000
   QuizManager: {fileID: 785326652}
   b1: {fileID: 177604613}
   b2: {fileID: 517141816}

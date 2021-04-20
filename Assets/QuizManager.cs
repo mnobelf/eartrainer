@@ -7,7 +7,9 @@ public class QuizManager : MonoBehaviour
     // Start is called before the first frame update
 
     public int answer;
+    public int[] keyans = new int[3];
     public int[] ans = new int[3];
+    public int i = 0;
     public RandomInterval generator;
     public RandomScale generator2;
     public RandomChord generator3;
@@ -41,9 +43,9 @@ public class QuizManager : MonoBehaviour
 
     public void SetKeyAnswerProg(int[] input)
     {
-        ans[0] = input[0];
-        ans[1] = input[1];
-        ans[2] = input[2];
+        keyans[0] = input[0];
+        keyans[1] = input[1];
+        keyans[2] = input[2];
     } 
 
     public void CheckAnswer(int input)
@@ -58,14 +60,26 @@ public class QuizManager : MonoBehaviour
         }
     }
 
-    public void CheckAnswerProg(int[] input)
+    public void CheckAnswerProg(int input)
     {
-        if ((input[0] == ans[0]) && (input[1] == ans[1]) && (input[2] == ans[2])) {
-            correctness.correct();
-            Invoke("AskGenerator",2f);
-        } else {
-            correctness.incorrect();
+        ans[i] = input;
+        i++;
+        
+        if (i > 2) {
+            i = 0;
+            if ((ans[0] == keyans[0]) && (ans[1] == keyans[1]) && (ans[2] == keyans[2])) {
+                correctness.correct();
+                Invoke("AskGenerator",2f);
+                Debug.Log("heyy");
+            } else {
+                correctness.incorrect();
+            }
+            for (int y = 0; y < 3; y++)
+            {
+                ans[y] = 0;
+            }
         }
+
     }
 
     void Start()

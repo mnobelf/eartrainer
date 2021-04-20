@@ -7,7 +7,7 @@ public class RandomProgression : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    AudioSource[] audioSources;
+    public AudioSource[] audioSources;
     public int root;
     public int chord;
     public QuizManager QuizManager;
@@ -40,8 +40,7 @@ public class RandomProgression : MonoBehaviour
     // Update is called once per frame
     IEnumerator PlayMajor()
     {
-        int[] AllowedValues = new int[] {0, 2, 4, 5, 7, 9, 11};
-        int root = AllowedValues[Random.Range(0,7)];
+        root = Random.Range(0,11);
 
         audioSources[root].Play();
         yield return new WaitForSeconds(1.0f);
@@ -160,6 +159,7 @@ public class RandomProgression : MonoBehaviour
 
     void ProgI()
     {
+        StopAudio();
         audioSources[root].Play();
         audioSources[root+4].Play();
         audioSources[root+7].Play();
@@ -167,6 +167,7 @@ public class RandomProgression : MonoBehaviour
 
     void ProgIV()
     {
+        StopAudio();
         audioSources[root+5].Play();
         audioSources[root+9].Play();
         audioSources[root+12].Play();        
@@ -174,6 +175,7 @@ public class RandomProgression : MonoBehaviour
 
     void ProgV()
     {
+        StopAudio();
         audioSources[root+7].Play();
         audioSources[root+11].Play();
         audioSources[root+14].Play();        
@@ -181,15 +183,27 @@ public class RandomProgression : MonoBehaviour
 
     void Progii()
     {
+        StopAudio();
         audioSources[0].Play();
         audioSources[3].Play();
         audioSources[7].Play();
     }
 
+    void StopAudio()
+    {
+        foreach (AudioSource item in audioSources)
+        {
+            item.Stop();
+        }
+    }
+
     void Start()
     {
-        Button button = b.GetComponent<Button>();
-        button.onClick.AddListener(delegate {StartCoroutine(Replay());});
+    }
+
+    public void HearAgain()
+    {
+        StartCoroutine(Replay());
     }
 
     IEnumerator Replay()
