@@ -18,7 +18,7 @@ public class RandomChord : MonoBehaviour
         {
             item.Stop();
         }
-        root = Random.Range(0,16);
+        root = Random.Range(0,15);
         chord = Random.Range(1, 5);
 
         if (chord == 1)
