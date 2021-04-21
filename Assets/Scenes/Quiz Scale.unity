@@ -267,7 +267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Answer: 1
   i: 0
-  ans: 000000000000000000000000
   QuizManager: {fileID: 375745336}
   b1: {fileID: 0}
   b2: {fileID: 0}
@@ -417,7 +416,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Answer: 3
   i: 0
-  ans: 000000000000000000000000
   QuizManager: {fileID: 375745336}
   b1: {fileID: 0}
   b2: {fileID: 0}
@@ -609,7 +607,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   answer: 0
+  keyans: 000000000000000000000000
   ans: 000000000000000000000000
+  i: 0
   generator: {fileID: 0}
   generator2: {fileID: 1291021408}
   generator3: {fileID: 0}
@@ -757,7 +757,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Answer: 4
   i: 0
-  ans: 000000000000000000000000
   QuizManager: {fileID: 375745336}
   b1: {fileID: 0}
   b2: {fileID: 0}
@@ -1277,7 +1276,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Answer: 2
   i: 0
-  ans: 000000000000000000000000
   QuizManager: {fileID: 375745336}
   b1: {fileID: 0}
   b2: {fileID: 0}
@@ -1640,7 +1638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5b91c6ce3eae63245955a7a4e877e0f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1ae052c84abea5040bec31400f997fa6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
