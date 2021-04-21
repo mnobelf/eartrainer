@@ -989,8 +989,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3384898001981338360, guid: 49510918312ecc44cb6158954e291b81,
-          type: 3}
+      - m_Target: {fileID: 1777255049}
         m_MethodName: HearAgain
         m_Mode: 1
         m_Arguments:
