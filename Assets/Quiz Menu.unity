@@ -577,7 +577,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 479891724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 684349807301687178, guid: f3bcf6dd69dd84340aa92aaa25848b8c,
+          type: 3}
+        m_MethodName: LoadTrainingScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Quiz ChordIdentification
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &479891724
 MonoBehaviour:
   m_ObjectHideFlags: 0

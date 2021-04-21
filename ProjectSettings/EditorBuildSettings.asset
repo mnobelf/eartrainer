@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Quiz Menu.unity
     guid: a949f6d6efbc8ba40ab762f536047902
   - enabled: 1
+    path: Assets/Scenes/Quiz ChordIdentification.unity
+    guid: 14d76da0dfefd79478f9918bf33cb75d
+  - enabled: 1
     path: Assets/Scenes/Quiz ChordProgression.unity
     guid: fb68bf17567f7b849b3be938ac964cbb
   - enabled: 1

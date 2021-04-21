@@ -25,21 +25,25 @@ public class RandomChord : MonoBehaviour
         {
             Invoke("PlayMajor", 1f);
             QuizManager.SetKeyAnswer(1);
+            Debug.Log("Jawaban: Major");
         }
         else if (chord == 2)
         {
             Invoke("PlayMinor", 1f);
             QuizManager.SetKeyAnswer(2);
+            Debug.Log("Jawaban: Minor");
         }
         else if (chord == 3)
         {
             Invoke("PlayDiminished", 1f);
             QuizManager.SetKeyAnswer(3);
+            Debug.Log("Jawaban: Diminished");
         }
         else
         {
             Invoke("PlayAugmented", 1f);
             QuizManager.SetKeyAnswer(4);
+            Debug.Log("Jawaban: Augmented");
         }
         
     }
@@ -90,7 +94,7 @@ public class RandomChord : MonoBehaviour
     {
         audioSources[root].Play();
         audioSources[root+4].Play();
-        audioSources[root+7].Play();
+        audioSources[root+8].Play();
     }
 
     void PlayDiminished()
