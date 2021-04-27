@@ -53,6 +53,8 @@ public class QuizManager : MonoBehaviour
         if (input == Mathf.Abs(answer)) {
             Debug.Log("Correct");
             correctness.correct();
+            // generator.b.interactable = true;
+            generator2.b.interactable = true;
             Invoke("AskGenerator",1f);
         } else {
             Debug.Log("Incorrect");
@@ -69,6 +71,7 @@ public class QuizManager : MonoBehaviour
             i = 0;
             if ((ans[0] == keyans[0]) && (ans[1] == keyans[1]) && (ans[2] == keyans[2])) {
                 correctness.correct();
+                generator4.b.interactable = true;
                 Invoke("AskGenerator",2f);
                 Debug.Log("heyy");
             } else {

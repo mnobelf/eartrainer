@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+
 
 public class RandomProgression : MonoBehaviour
 {
@@ -17,6 +19,12 @@ public class RandomProgression : MonoBehaviour
 
     public void PlaySound()
     {
+        b.onClick.AddListener(Play);
+    }
+
+    public void Play()
+    {
+        b.interactable = false;
         audioSources = gameObject.GetComponents<AudioSource>();
         chord = Random.Range(1,3);
         chord = 1;
@@ -137,6 +145,7 @@ public class RandomProgression : MonoBehaviour
                 Invoke("ProgI", 0.5f);
             }
         }
+        GameObject.Find("replay-button").GetComponentInChildren<Text>().text = "Listen Again";
 
         for (int c = 0; c < 3; c++)
         {

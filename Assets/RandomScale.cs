@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RandomScale : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class RandomScale : MonoBehaviour
     int scale;
     int index;
     public QuizManager QuizManager;
+    public Button b;
 
     void Start()
     {
@@ -24,6 +26,13 @@ public class RandomScale : MonoBehaviour
 
     public void PlaySound()
     {
+        b.onClick.AddListener(Play);
+    }    
+
+    public void Play()
+    {
+        b.interactable = false;
+        
         audioSources = gameObject.GetComponents<AudioSource>();
         foreach (AudioSource item in audioSources)
         {
