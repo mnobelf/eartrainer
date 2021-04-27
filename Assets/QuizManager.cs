@@ -53,9 +53,23 @@ public class QuizManager : MonoBehaviour
         if (input == Mathf.Abs(answer)) {
             Debug.Log("Correct");
             correctness.correct();
-            // generator.b.interactable = true;
-            generator2.b.interactable = true;
-            Invoke("AskGenerator",1f);
+            if (gameObject.tag == "Scale")
+            {
+                generator2.started = false;
+            }
+            else if (gameObject.tag == "Chord")
+            {
+                generator3.started = false;
+            }
+            else if (gameObject.tag == "Progression")
+            {
+                generator4.started = false;
+            }
+            else
+            {
+                generator.started = false;
+            }
+            StartCoroutine(QuestionMark());
         } else {
             Debug.Log("Incorrect");
             correctness.incorrect();
@@ -71,8 +85,7 @@ public class QuizManager : MonoBehaviour
             i = 0;
             if ((ans[0] == keyans[0]) && (ans[1] == keyans[1]) && (ans[2] == keyans[2])) {
                 correctness.correct();
-                generator4.b.interactable = true;
-                Invoke("AskGenerator",2f);
+                generator4.started = false;
                 Debug.Log("heyy");
             } else {
                 correctness.incorrect();
@@ -84,14 +97,10 @@ public class QuizManager : MonoBehaviour
         }
 
     }
-
-    void Start()
-    {
-        Invoke("AskGenerator",1f);
-    }
     // Update is called once per frame
-    void Update()
+    IEnumerator QuestionMark()
     {
-        
+        yield return new WaitForSeconds(2);
+        correctness.question();
     }
 }

@@ -28,4 +28,9 @@ public class CheckCorrectness : MonoBehaviour
     {
     	answer.text = "Incorrect!";
     }
+
+    public void question()
+    {
+        answer.text = "?";
+    }
 }

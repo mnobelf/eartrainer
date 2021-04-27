@@ -19,16 +19,12 @@ public class GenerateInterval : MonoBehaviour
     public Text txt;
     public AudioSource[] aus;
     public PitchAnalyzer analyzer;
+    public bool started;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        Play();
-    }
 
     void Play()
     {
-
+        started = true;
         index_interval = Random.Range(0, 12);
         interval_name = new string[12];
         interval_name[0] = "Minor 2nd";
@@ -90,7 +86,14 @@ public class GenerateInterval : MonoBehaviour
 
     public void HearAgain()
     {
-        aus[index_not].Play();
+        if (started) 
+        {
+            aus[index_not].Play();
+        } else 
+        {
+            Play();
+        }
+        
     }
 
     // Update is called once per frame
@@ -101,7 +104,7 @@ public class GenerateInterval : MonoBehaviour
         {
             txt.text = "Answer Correct";
             pitchAnswer = 88;
-            Invoke("Play", 2f);
+            started = false;
         }
     }
 

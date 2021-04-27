@@ -15,19 +15,15 @@ public class RandomProgression : MonoBehaviour
     public QuizManager QuizManager;
     int[] answer = new int[3];
     public string[] rep = new string[3];
-    public Button b;
+    public bool started;
+
 
     public void PlaySound()
     {
-        b.onClick.AddListener(Play);
-    }
-
-    public void Play()
-    {
-        b.interactable = false;
         audioSources = gameObject.GetComponents<AudioSource>();
         chord = Random.Range(1,3);
         chord = 1;
+        started = true;
 
         if (chord == 1)
         {
@@ -36,12 +32,7 @@ public class RandomProgression : MonoBehaviour
         else if (chord == 2)
         {
             StartCoroutine(PlayMinor());
-            // QuizManager.SetKeyAnswer(2);
         }
-        // else 
-        // {
-        //     StartCoroutine(PlayAugmented());
-        // }
  
     }
 
@@ -49,7 +40,7 @@ public class RandomProgression : MonoBehaviour
     IEnumerator PlayMajor()
     {
         root = Random.Range(0,11);
-
+        
         audioSources[root].Play();
         yield return new WaitForSeconds(1.0f);
 
@@ -212,11 +203,19 @@ public class RandomProgression : MonoBehaviour
 
     public void HearAgain()
     {
-        StartCoroutine(Replay());
+        if (started) {
+            StartCoroutine(Replay());
+        } else {
+            PlaySound();
+        }
+        
     }
 
     IEnumerator Replay()
     {
+        audioSources[root].Play();
+        yield return new WaitForSeconds(1.0f);
+
         Invoke(rep[0], 0.5f);
         yield return new WaitForSeconds(1.0f);
 

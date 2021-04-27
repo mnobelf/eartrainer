@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Quiz Menu.unity
+- path: Assets/Scenes/Quiz Scale.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

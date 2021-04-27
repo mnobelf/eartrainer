@@ -11,13 +11,9 @@ public class RandomScale : MonoBehaviour
     int root;
     int scale;
     int index;
+    public bool started;
     public QuizManager QuizManager;
     public Button b;
-
-    void Start()
-    {
-        
-    }
 
     IEnumerator waiter()
     {
@@ -26,12 +22,7 @@ public class RandomScale : MonoBehaviour
 
     public void PlaySound()
     {
-        b.onClick.AddListener(Play);
-    }    
-
-    public void Play()
-    {
-        b.interactable = false;
+        started = true;
         
         audioSources = gameObject.GetComponents<AudioSource>();
         foreach (AudioSource item in audioSources)
@@ -66,26 +57,27 @@ public class RandomScale : MonoBehaviour
 
     public void Repeat()
     {
-        if (scale == 1)
-        {
-            StartCoroutine(PlayMajor());
-            QuizManager.SetKeyAnswer(1);
+        if (started) {
+            if (scale == 1)
+            {
+                StartCoroutine(PlayMajor());
+            }
+            else if (scale == 2)
+            {
+                StartCoroutine(PlayMinor());
+            }
+            else if (scale == 3)
+            {
+                StartCoroutine(PlayPentatonicMajor());
+            }
+            else
+            {
+                StartCoroutine(PlayBlues());
+            }
+        } else {
+            PlaySound();
         }
-        else if (scale == 2)
-        {
-            StartCoroutine(PlayMinor());
-            QuizManager.SetKeyAnswer(2);
-        }
-        else if (scale == 3)
-        {
-            StartCoroutine(PlayPentatonicMajor());
-            QuizManager.SetKeyAnswer(3);
-        }
-        else
-        {
-            StartCoroutine(PlayBlues());
-            QuizManager.SetKeyAnswer(4);
-        }
+
         
     }
     // Update is called once per frame

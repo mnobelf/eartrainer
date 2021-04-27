@@ -10,10 +10,12 @@ public class RandomInterval : MonoBehaviour
     int root;
     int interval;
     public QuizManager QuizManager;
+    public bool started;
 
     public void PlaySound()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
+        started = true;
         foreach (AudioSource item in audioSources)
         {
             item.Stop();
@@ -34,8 +36,13 @@ public class RandomInterval : MonoBehaviour
 
     public void Repeat()
     {
-        audioSources = gameObject.GetComponents<AudioSource>();
-        Invoke("PlaySound1", 1f);
+
+        if (started) {
+            audioSources = gameObject.GetComponents<AudioSource>();
+            Invoke("PlaySound1", 1f);
+        } else {
+            PlaySound();
+        }
     }
 
     // Update is called once per frame

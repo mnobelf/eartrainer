@@ -2357,7 +2357,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hear Again
+  m_Text: Listen
 --- !u!222 &1511334496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2474,6 +2474,7 @@ MonoBehaviour:
   - {fileID: 834741208}
   - {fileID: 1496767310}
   analyzer: {fileID: 1563639474}
+  started: 0
 --- !u!114 &1563639474
 MonoBehaviour:
   m_ObjectHideFlags: 0

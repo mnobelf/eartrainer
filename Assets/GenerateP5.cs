@@ -8,6 +8,7 @@ public class GenerateP5 : MonoBehaviour
 
     public float pi_mic;
 
+    public bool started;
     int chord;
     int index_not;
     int pitchAnswer;
@@ -17,15 +18,12 @@ public class GenerateP5 : MonoBehaviour
     public PitchAnalyzer analyzer;
     
     // Start is called before the first frame update
-    void Start()
-    {
-        Play();
-    }
 
     void Play()
     {
         audioSources = gameObject.GetComponents<AudioSource>();
         chord = Random.Range(0, 1);
+        started = true;
 
         //index_up_down = 1;
         if (chord == 0)
@@ -56,8 +54,14 @@ public class GenerateP5 : MonoBehaviour
 
     public void HearAgain()
     {
-        audioSources[index_not].Play();
-        audioSources[index_not+7].Play();
+        if (started) {
+            audioSources[index_not].Play();
+            audioSources[index_not+7].Play();
+        } else
+        {
+            Play();
+        }
+
     }
 
     // Update is called once per frame
@@ -68,7 +72,7 @@ public class GenerateP5 : MonoBehaviour
         {
             txt.text = "Answer Correct";
             pitchAnswer = 88;
-            Invoke("Play", 2f);
+            started = false;
         }
     }
 

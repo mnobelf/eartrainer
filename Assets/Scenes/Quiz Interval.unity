@@ -1508,7 +1508,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hear Again
+  m_Text: Listen
 --- !u!222 &1195345019
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1892,6 +1892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuizManager: {fileID: 345410879}
+  started: 0
 --- !u!82 &1688798527
 AudioSource:
   m_ObjectHideFlags: 0

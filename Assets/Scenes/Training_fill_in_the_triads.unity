@@ -1406,7 +1406,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hear Again
+  m_Text: Listen
 --- !u!222 &1625239137
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1487,6 +1487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pi_mic: 0
+  started: 0
   txt: {fileID: 649440938}
   audioSources: []
   mic: {fileID: 48475663}
